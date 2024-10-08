@@ -27,10 +27,11 @@ body.loading > div:not(.loader) {
 .ui.loader > .slogan-logo > div {
     font-weight: 500;
     font-size: 3rem;
+    padding-top: 1rem;
     margin-top: 1rem;
     white-space: nowrap;
     overflow: hidden; 
-    width: 0;
+    width: 100%;
     text-align: center;
     animation: revealText 2s steps(100) forwards;
 }
@@ -53,6 +54,20 @@ body.loading > div:not(.loader) {
     border: 1px solid rgba(35, 35, 35, 1);
     border-radius: 2px;
     padding: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .ui.loader > .bottom-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .ui.loader > .bottom-row > button {
+        width: 40%;
+    }
+    .ui.loader > .slogan-logo > div {
+        max-width: 90vw;
+        font-size: 1.5rem;
+    }
 }
 
 /* animations */
